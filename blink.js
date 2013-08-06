@@ -8,9 +8,9 @@
     blinkStateVisible = !blinkStateVisible;
     var visibilityState = blinkStateVisible ? 'visible' : 'hidden'
     var timeoutDuration = blinkStateVisible ? kBlinkVisibilityDuration : kBlinkHiddenDuration;
-    var blinkElements = Array.prototype.slice.apply(document.querySelectorAll('blink'));
+    var blinkElements = document.querySelectorAll('blink');
 
-    blinkElements.forEach(function(elem) {
+    Array.prototype.forEach.call(blinkElements, function (elem) {
       elem.style.visibility = visibilityState;
     });
 
@@ -19,4 +19,4 @@
 
   setTimeout(toggleBlinking, kBlinkVisibilityDuration);
 
-})();
+}());
