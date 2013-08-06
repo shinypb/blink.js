@@ -11,7 +11,7 @@
     });
   };
 
-  var kBlinkInterval = 1000;
+  var kBlinkInterval = 500;
   var blinkTimer = setInterval(toggleBlinking, kBlinkInterval);
 
 })();
